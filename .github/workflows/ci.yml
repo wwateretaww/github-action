@@ -17,6 +17,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - run: cd storybook
     - run: yarn install --frozen-lockfile
-    - run: cd storybook; yarn build
+    - run: yarn build
     - run: git push origin `git subtree split --prefix storybook/dist master`:gh --force
