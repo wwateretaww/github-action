@@ -6,27 +6,25 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-/******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
+/** ****/ (() => { // webpackBootstrap
+/** ****/ 	const __webpack_modules__ = ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
+    /***/ './src/index.js':
+    /* !**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ (() => {
+    /***/ (() => {
+      eval('let div = document.createElement(\'div\')\n\ndiv.className = "className"\ndiv.innerHTML = "<strong>Здесь могла была быть ваша реклама!</strong>"\n\n//# sourceURL=webpack://storybook/./src/index.js?');
+      /***/}),
 
-eval("let div = document.createElement('div')\n\ndiv.className = \"className\"\ndiv.innerHTML = \"<strong>Здесь могла была быть ваша реклама!</strong>\"\n\n//# sourceURL=webpack://storybook/./src/index.js?");
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/index.js"]();
-/******/ 	
-/******/ })()
+    /** ****/});
+  /** **********************************************************************/
+  /** ****/
+  /** ****/ 	// startup
+  /** ****/ 	// Load entry module and return exports
+  /** ****/ 	// This entry module can't be inlined because the eval devtool is used.
+  /** ****/ 	const __webpack_exports__ = {};
+  /** ****/ 	__webpack_modules__['./src/index.js']();
+/** ****/
+/** ****/ })()
 ;
