@@ -1,0 +1,9 @@
+{
+  "name": "github-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wwateretaww/github-action.git",
+  "author": "wwateretaww <sergey.and@okwork.io>",
+  "license": "MIT",
+  "private": true
+}
