@@ -18,8 +18,16 @@ jobs:
       - run: |
           cd storybook
           yarn install --frozen-lockfile
+          yarn upgrade react --latest
           yarn build
+
+      - name: Get Diff Action
+        uses: technote-space/get-diff-action@v4.0.1
+        with:
+          PREFIX_FILTER: storybook/dist
+
       - name: deploy
+        if: ${{ env.GIT_DIFF }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

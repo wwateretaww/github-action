@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+const ch = require("child_process")
+const event = process.argv.pop()
+
+const build = () => ch.exec(`
+  cd ./storybook; 
+  yarn build '--color'
+`, (error, stdout, stderr) => {
+  console.log(stdout || stderr)
+})
+
+const eslint = () => ch.exec(`
+  cd ./storybook; 
+  yarn eslint '--color'
+`, (error, stdout, stderr) => {
+  console.log(stdout || stderr)
+})
+
+switch (event) {
+  case "build": return build()
+  case "eslint": return eslint()
+  default: {
+    throw new Error(`Event ${event} empty or not exist!`);
+  }
+}
