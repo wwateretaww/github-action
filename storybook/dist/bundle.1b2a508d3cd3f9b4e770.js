@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("const div = document.createElement('div');\n\ndiv.className = 'className';\ndiv.innerHTML = '<strong>Здесь могла была быть ваша реклама!</strong>';\n\n\n//# sourceURL=webpack://storybook/./src/index.js?");
+eval("const div = document.createElement('div');\n\ndiv.className = 'className';\ndiv.innerHTML = '<strong>Здесь могла была быть ваша реклама!</strong>';\ndocument.body.appendChild(div);\n\n\n//# sourceURL=webpack://storybook/./src/index.js?");
 
 /***/ })
 
