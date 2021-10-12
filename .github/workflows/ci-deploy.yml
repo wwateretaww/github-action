@@ -18,13 +18,12 @@ jobs:
       - run: |
           cd storybook
           yarn install --frozen-lockfile
-          yarn upgrade react --latest
           yarn build
 
       - name: Сheck if build has changed
         uses: technote-space/get-diff-action@v4.0.1
         with:
-          PREFIX_FILTER: storybook/dist
+          PATTERNS: storybook/dist/*.+(js|html)
 
       - name: deploy
         if: ${{ env.GIT_DIFF }}
