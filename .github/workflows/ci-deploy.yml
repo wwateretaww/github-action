@@ -19,7 +19,10 @@ jobs:
           cd storybook
           yarn install --frozen-lockfile
           yarn build
+      - name: "Сheck if build has changed"
+        run: echo ::set-env name=DIFF_BUILD::$(git diff  --stat -- 'lib')
       - name: deploy
+        if: ${{ env.DIFF_BUILD }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

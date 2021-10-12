@@ -30,7 +30,3 @@ jobs:
           cd storybook
           yarn install --frozen-lockfile
           yarn eslint
-      # - run: |
-      #     cd storybook
-      #     yarn install --frozen-lockfile
-      #     yarn lint
