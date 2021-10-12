@@ -23,7 +23,7 @@ jobs:
       - name: Сheck if build has changed
         uses: technote-space/get-diff-action@v4.0.1
         with:
-          RELATIVE: './storybook/dist'
+          RELATIVE: ./storybook/dist
           PATTERNS: '*.js'
 
       - name: deploy
