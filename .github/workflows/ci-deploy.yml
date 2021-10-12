@@ -23,10 +23,10 @@ jobs:
       - name: Сheck if build has changed
         uses: technote-space/get-diff-action@v4.0.1
         with:
-          PATTERNS: '*.js'
-          RELATIVE: './storybook/dist'
+          PREFIX_FILTER: storybook/dist
+          SUFFIX_FILTER: .js
 
-      - name: deploy
+      - name: Deploy
         if: ${{ env.GIT_DIFF }}
         uses: peaceiris/actions-gh-pages@v3
         with:
