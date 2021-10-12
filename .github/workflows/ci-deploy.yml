@@ -23,8 +23,8 @@ jobs:
       - name: Сheck if build has changed
         uses: technote-space/get-diff-action@v4.0.1
         with:
-          RELATIVE: ./storybook/dist
           PATTERNS: '*.js'
+          RELATIVE: './storybook/dist'
 
       - name: deploy
         if: ${{ env.GIT_DIFF }}
