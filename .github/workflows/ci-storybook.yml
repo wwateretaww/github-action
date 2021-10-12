@@ -17,7 +17,7 @@ jobs:
           cd storybook
           yarn install --frozen-lockfile
           yarn build
-  lint:
+  lints:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,4 +30,7 @@ jobs:
       - run: |
           cd storybook
           yarn install --frozen-lockfile
-          yarn lint
+
+      - uses: wearerequired/lint-action@v1
+      - with:
+          eslint: true
