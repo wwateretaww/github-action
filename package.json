@@ -5,5 +5,9 @@
   "repository": "https://github.com/wwateretaww/github-action.git",
   "author": "wwateretaww <sergey.and@okwork.io>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "sb:build": "bin/storybook build",
+    "sb:eslint": "bin/storybook eslint"
+  }
 }

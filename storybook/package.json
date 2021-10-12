@@ -8,6 +8,7 @@
     "eslint": "eslint **/*.js"
   },
   "dependencies": {
+    "react": "16.8.0",
     "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0"
   },
