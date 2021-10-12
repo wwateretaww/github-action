@@ -3,7 +3,7 @@ name: CI
 on:
   pull_request:
 jobs:
-  storybook-build:
+  storybook:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,15 +18,6 @@ jobs:
         run: |
           cd storybook
           yarn install --frozen-lockfile
-          yarn build
-  storybook-lint:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout branch
-        uses: actions/checkout@v2
-      - name: Run eslint
-        run: |
-          cd storybook
-          yarn install --frozen-lockfile
           yarn eslint
+          yarn build
+          
