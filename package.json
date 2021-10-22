@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "sb:build": "bin/storybook build",
-    "sb:eslint": "bin/storybook eslint"
+    "sb:eslint": "bin/storybook eslint",
+    "test": "storybook/bin/storybook"
   }
 }
